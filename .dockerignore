@@ -1,0 +1,18 @@
+# More info: https://docs.docker.com/engine/reference/builder/#dockerignore-file
+# Exclude all files by default
+*
+
+# Re-include directories so we can re-include files inside them
+!*/
+
+# Re-include Go source files (but not *_test.go)
+!**/*.go
+
+**/*_test.go
+
+# Re-include Go module files
+!go.mod
+!go.sum
+
+# Re-include sql folder
+!sql/**

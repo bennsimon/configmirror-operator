@@ -1,0 +1,15 @@
+apiVersion: bennsimon.github.io/v1alpha1
+kind: ConfigMirror
+metadata:
+  labels:
+    app.kubernetes.io/name: configmirror
+    app.kubernetes.io/managed-by: kustomize
+  name: configmirror-kube
+spec:
+  sourceNamespace: config-mirror
+  targetNamespaces:
+    - kube-system
+  selector:
+    matchLabels:
+      app: mySvc
+      team: oper

@@ -1,0 +1,14 @@
+apiVersion: bennsimon.github.io/v1alpha1
+kind: ConfigMirror
+metadata:
+  labels:
+    app.kubernetes.io/name: configmirror
+    app.kubernetes.io/managed-by: kustomize
+  name: configmirror-sample
+spec:
+  sourceNamespace: default
+  targetNamespaces:
+    - config-mirror
+  selector:
+    matchLabels:
+      app: mySvc
