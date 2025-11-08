@@ -53,12 +53,6 @@ In the above sample configmaps, in the `default` namespace with labels `{app: my
 
 #### GitHub Actions
 
-Update the following GitHub action workflow with proper AWS configurations i.e. `AWS_ACCOUNT_ID` and `AWS_REGION`.
-[docker-publish.yml](.github/workflows/docker-publish.yml)
-[helm-publish.yml](.github/workflows/helm-publish.yml)
-
-> Both the docker image and helm chart are published to a container repository.
-
 ## Deployment
 
 ### Creating release tag
